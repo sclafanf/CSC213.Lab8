@@ -2,8 +2,6 @@
 
 Welcome to this hands-on lab focused on **functional programming in Java** using **Streams**, **OpenCSV**, and a clean, testable data model. You’ll explore modern techniques for processing data in a more declarative style—less telling the computer how to do something, and more just telling it *what* you want.
 
-Absolutely! Here's a section you can add to your lab README (or syllabus) that gives your students clear instructions on how to **fork the repo**, **invite you**, and **share it back**. This ensures they're practicing proper GitHub workflow **and** giving you access for review and feedback.
-
 ---
 
 ## 🔄 Submitting Your Lab
@@ -192,10 +190,3 @@ This will:
 
 Complete the TODOs using **functional streams**, compare them to the **imperative versions**, and get a feel for modern, clean Java.
 
-> Keep it readable. Keep it testable. And have fun!
-
-Let’s gooooo! 💥💻
-
----
-
-Let me know if you want this exported as a README file or bundled with your starter files!
