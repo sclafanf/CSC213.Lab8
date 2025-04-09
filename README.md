@@ -38,7 +38,7 @@ git push origin main
 1. Go to your **forked repo** on GitHub.
 2. Click **"Settings"** (top-right).
 3. In the left sidebar, click **"Collaborators"**.
-4. Click **"Add people"** and type **my GitHub username** (you'll be provided this).
+4. Click **"Add people"** and type **my GitHub username** ```delveccj```.
 5. Click **"Invite"**.
 
 ---
