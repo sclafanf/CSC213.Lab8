@@ -5,6 +5,7 @@ import com.opencsv.bean.CsvToBeanBuilder;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -116,9 +117,11 @@ public class App {
 
 
     public static List<Review> filterByPriceRange(List<Review> reviews, double min, double max) {
-        //TODO - you need to implement this using a functional approach!
-        return null;
+        return reviews.stream()  // Start a stream from the list of reviews
+                .filter(r -> r.getPrice() >= min && r.getPrice() <= max)  // Filter reviews based on price
+                .collect(Collectors.toList());  // Collect the filtered reviews into a new list
     }
+    
 
     public static Map<String, Long> countByProductId(List<Review> reviews) {
         return reviews.stream()
@@ -150,9 +153,13 @@ public class App {
 
 
     public static List<String> getHomeProductIdsUnder100(List<Review> reviews) {
-        //TODO - you need to implement this using a functional approach!
-        return new ArrayList<String>();                             // Final list of productIds
-    }
+    return reviews.stream()  
+            .filter(r -> "Home".equalsIgnoreCase(r.getCategory()))  
+            .filter(r -> r.getPrice() < 100)  
+            .sorted(Comparator.comparingDouble(Review::getPrice))  
+            .map(Review::getProductId)  
+            .collect(Collectors.toList());  
+}
 
     
 
